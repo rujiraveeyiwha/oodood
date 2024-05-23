@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { Container, Col, Row, Card, Button, Form } from "react-bootstrap";
+import {
+  Container,
+  Col,
+  Row,
+  Card,
+  Button,
+  Form,
+  FormGroup,
+  Badge,
+  Image,
+} from "react-bootstrap";
 import "./App.css";
 import Menu from "./Assets/Menu.json";
 import FoodMarquee from "./FoodMarquee";
@@ -67,39 +77,48 @@ function App() {
     <div className="App app-container">
       <Container className="px-4 px-lg-5 pt-5">
         <Row className="gx-4 gx-lg-5 my-2">
-          <Card>
+          <h1>
+            วันนี้กินอะไรดีคะ🍽️ <Badge bg="warning">V1.0</Badge>
+          </h1>
+          <Card className="mt-3">
             <Card.Body>
-              <Card.Title>วันนี้กินอะไรดีคะ🍽️</Card.Title>
-              <Card.Text>
+              <Card.Title>เลือกประเภทเลย</Card.Title>
+              <Card.Text className="mt-4">
                 <Form>
-                  <Form.Check
-                    type="checkbox"
-                    label="ข้าว"
-                    name="rice"
-                    checked={selectedCategories.rice}
-                    onChange={handleCheckboxChange}
-                  />
-                  <Form.Check
-                    type="checkbox"
-                    label="เส้น"
-                    name="noodles"
-                    checked={selectedCategories.noodles}
-                    onChange={handleCheckboxChange}
-                  />
-                  <Form.Check
-                    type="checkbox"
-                    label="ทานเล่น"
-                    name="easy"
-                    checked={selectedCategories.easy}
-                    onChange={handleCheckboxChange}
-                  />
-                  <Form.Check
-                    type="checkbox"
-                    label="แซ่บ"
-                    name="spicy"
-                    checked={selectedCategories.spicy}
-                    onChange={handleCheckboxChange}
-                  />
+                  <FormGroup>
+                    <Form.Check
+                      inline
+                      type="checkbox"
+                      label="ข้าว"
+                      name="rice"
+                      checked={selectedCategories.rice}
+                      onChange={handleCheckboxChange}
+                    />
+                    <Form.Check
+                      inline
+                      type="checkbox"
+                      label="เส้น"
+                      name="noodles"
+                      checked={selectedCategories.noodles}
+                      onChange={handleCheckboxChange}
+                    />
+                    <Form.Check
+                      inline
+                      type="checkbox"
+                      label="ทานเล่น"
+                      name="easy"
+                      checked={selectedCategories.easy}
+                      onChange={handleCheckboxChange}
+                    />
+                    <Form.Check
+                      inline
+                      type="checkbox"
+                      label="แซ่บ"
+                      name="spicy"
+                      checked={selectedCategories.spicy}
+                      onChange={handleCheckboxChange}
+                    />
+                  </FormGroup>
                 </Form>
               </Card.Text>
               <Button
@@ -127,12 +146,25 @@ function App() {
       </Container>
 
       <Container className="px-4">
-        <Row className="gx-4 gx-lg-5 my-4">
+        <Row className="gx-4 gx-lg-5 my-5">
           <Card style={{ height: "10rem" }}>
             <Card.Body>
-              <Card.Title>เราขอเสนอ</Card.Title>
+              {selectedItem.length === 0 ? (
+                <Card.Title className="mb-3">คิดๆๆ</Card.Title>
+              ) : (
+                <Card.Title className="mb-3">เราขอเสนอ</Card.Title>
+              )}
+
               <Card.Text>
-                {selectedItem && <p className="mt-3">{selectedItem}</p>}
+                {selectedItem.length === 0 ? (
+                  <Image
+                    variant="bottom"
+                    src="https://media.giphy.com/media/mRh4cLIYhrs9G/giphy.gif?cid=ecf05e47utprpx1v57nlyntvjq466or7y54xhjjwe7hgf42h&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+                    style={{ width: "50%", height: "50%" }}
+                  />
+                ) : (
+                  <p className="mt-3">{selectedItem}</p>
+                )}
               </Card.Text>
             </Card.Body>
           </Card>
