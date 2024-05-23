@@ -35,13 +35,13 @@ body {
 }
 
 .navbar-colour {
-  background-color: #A2D2FF;
+  background-color: #A0C4FF;
 }
 
 /* Override primary button color */
 .btn-primary {
-  background-color: #ffc8dd !important; /* Change to your desired color */
-  border-color: #ffc8dd !important; /* Change to your desired color */
+  background-color: #FFCEFF !important; /* Change to your desired color */
+  border-color: #FFCEFF !important; /* Change to your desired color */
   color: #282c34 !important;
 }
 
@@ -51,8 +51,8 @@ body {
 .btn-primary:active,
 .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
-  background-color: #ffafcc !important; /* Change to your desired hover color */
-  border-color: #ffafcc !important; /* Change to your desired hover color */
+  background-color: #FFC6FF !important; /* Change to your desired hover color */
+  border-color: #FFC6FF !important; /* Change to your desired hover color */
 }
 
 /* Override primary button color */
@@ -94,21 +94,29 @@ body {
   margin-right: 1em;
 }
 
-.post-heading {
+.highlight-text {
   position: relative;
   text-align: center;
   display: block;
   margin: 0 auto;
   max-width: 100%;
-}
-.post-heading h2 {
   display: inline;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 65%,
     rgb(255 69 0) 65%
   );
-  box-shadow: inset 0 -0.5em 0 rgb(255 203 86);
+  box-shadow: inset 0 -0.5em 0 rgb(158, 221, 255);
+}
+
+.highlight-text h2 {
+  display: inline;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 65%,
+    rgb(255 69 0) 65%
+  );
+  box-shadow: inset 0 -0.5em 0 rgb(255, 189, 0) !important;
 }
 
 .marquee-container {
@@ -125,7 +133,7 @@ body {
   display: inline-block;
   animation: marquee 60s linear infinite;
   animation-delay: -25s; /* Start immediately by offsetting the initial animation */
-  font-size: 50px; /* Adjust the font size of the emojis */
+  font-size: 30px; /* Adjust the font size of the emojis */
   letter-spacing: 20px;
 }
 @keyframes marquee {
@@ -145,3 +153,31 @@ body {
     height: 812px;
   }
 }
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: inline-flex;
+  gap: 10px;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  height: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border-color: #000;
+  background:
+    radial-gradient(farthest-side,#000 95%,#0000) 35% 35%/6px 6px no-repeat
+    #fff;
+    border: 1px solid #000;
+  animation: l5 3s infinite;
+}
+@keyframes l5 {
+  0%,11%   {background-position:35% 35%}
+  14%,36%  {background-position:65% 35%}
+  38%,61%  {background-position:65% 65%}
+  64%,86%  {background-position:35% 65%}
+  88%,100% {background-position:35% 35%}
+}
+

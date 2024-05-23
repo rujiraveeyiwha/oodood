@@ -77,18 +77,20 @@ function App() {
   return (
     <>
       <div className="App app-container">
-      <Navbar expand="lg" className="navbar-colour shadow">
-        <Container className="d-flex justify-content-center align-items-center">
-          <Navbar.Brand href="#">
-            วันนี้กินอะไรดีคะ🍽️ <Badge bg="warning">V1.0</Badge>
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
-        <Container className="px-4 px-lg-5 pt-5">
+        <Navbar expand="lg" className="navbar-colour shadow">
+          <Container className="d-flex justify-content-center align-items-center">
+            <Navbar.Brand href="#">
+              วันนี้กินอะไรดีคะ🍽️ <Badge bg="warning">V1.0</Badge>
+            </Navbar.Brand>
+          </Container>
+        </Navbar>
+        <Container className="px-4 px-lg-5 pt-2">
           <Row className="gx-4 gx-lg-5 my-2">
             <Card className="mt-3">
               <Card.Body>
-                <Card.Title>เลือกประเภทเลย</Card.Title>
+                <Card.Title className="highlight-text">
+                  เลือกประเภทเลย
+                </Card.Title>
                 <Card.Text className="mt-4">
                   <Form>
                     <FormGroup>
@@ -156,8 +158,9 @@ function App() {
             <Card style={{ height: "10rem" }}>
               <Card.Body className="d-flex flex-column justify-content-center align-items-center">
                 <div>
-                  {selectedItem.length === 0 ? (
-                    <Card.Title className="mx-3">คิดๆๆ</Card.Title>
+                  {selectedItem.length === 0 ||
+                  selectedItem === "เลือกประเภทก่อนนะคนดี" ? (
+                    <Card.Title className="mx-3">กินไรดีนะ</Card.Title>
                   ) : (
                     <Card.Title className="mx-3">เราขอเสนอ</Card.Title>
                   )}
@@ -166,17 +169,10 @@ function App() {
                 <div>
                   <Card.Text>
                     {selectedItem.length === 0 ? (
-                      <Image
-                        variant="bottom"
-                        src="https://media.giphy.com/media/mRh4cLIYhrs9G/giphy.gif?cid=ecf05e47utprpx1v57nlyntvjq466or7y54xhjjwe7hgf42h&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-                        style={{ width: "50%", height: "50%" }}
-                      />
+                      <div class="loader"></div>
                     ) : (
-                      // <h2 className="mx-3 text-center post-heading">
-                      //   {selectedItem}
-                      // </h2>
-                      <div class="post-heading">
-                        <h2>{selectedItem}</h2>
+                      <div class="highlight-text">
+                        <h2>{selectedItem}!</h2>
                       </div>
                     )}
                   </Card.Text>
