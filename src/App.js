@@ -86,7 +86,7 @@ function App() {
         </Navbar>
         <Container className="px-4 px-lg-5 pt-2">
           <Row className="gx-4 gx-lg-5 my-2">
-            <Card className="mt-3">
+            <Card className="mt-3 custom-card-colour">
               <Card.Body>
                 <Card.Title className="highlight-text">
                   เลือกประเภทเลย
@@ -137,25 +137,30 @@ function App() {
                   สุ่มเลย!🪄
                 </Button>
               </Card.Body>
+              <Card.Footer>
+                <Button
+                  type="button"
+                  variant="warning"
+                  className="mx-3"
+                  onClick={handleSelectAll}
+                >
+                  ได้หมด
+                </Button>
+                <Button
+                  type="button"
+                  variant="light"
+                  onClick={handleFastSelection}
+                >
+                  ขอเป็นมื้อเร็วๆจ้า
+                </Button>
+              </Card.Footer>
             </Card>
           </Row>
-
-          <Button
-            type="button"
-            variant="warning"
-            className="mx-3"
-            onClick={handleSelectAll}
-          >
-            ได้หมด
-          </Button>
-          <Button type="button" variant="light" onClick={handleFastSelection}>
-            ขอเป็นมื้อเร็วๆจ้า
-          </Button>
         </Container>
 
         <Container className="px-4">
           <Row className="gx-4 gx-lg-5 my-5">
-            <Card style={{ height: "10rem" }}>
+            <Card style={{ height: "10rem" }} className="custom-card-colour-2">
               <Card.Body className="d-flex flex-column justify-content-center align-items-center">
                 <div>
                   {selectedItem.length === 0 ||
@@ -182,17 +187,17 @@ function App() {
           </Row>
         </Container>
 
-        <Container className="px-4">
+        <Container className="mt-1">
           <Button
             variant="outline-success"
-            className="mb-3"
+            className="mb-2"
             onClick={handleClearSelection}
           >
             ล้างๆ
           </Button>
         </Container>
 
-        <Container className="px-4">
+        <Container className="pb-4">
           <FoodMarquee />
         </Container>
       </div>

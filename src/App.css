@@ -35,13 +35,22 @@ body {
 }
 
 .navbar-colour {
-  background-color: #A0C4FF;
+  background-color: #a0c4ff;
+}
+
+.custom-card-colour {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.custom-card-colour-2 {
+  background-color: rgba(255, 206, 255, 0.7) !important;
+  border-color: #FFC6FF !important;
 }
 
 /* Override primary button color */
 .btn-primary {
-  background-color: #FFCEFF !important; /* Change to your desired color */
-  border-color: #FFCEFF !important; /* Change to your desired color */
+  background-color: #ffceff !important; /* Change to your desired color */
+  border-color: #ffceff !important; /* Change to your desired color */
   color: #282c34 !important;
 }
 
@@ -51,8 +60,8 @@ body {
 .btn-primary:active,
 .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
-  background-color: #FFC6FF !important; /* Change to your desired hover color */
-  border-color: #FFC6FF !important; /* Change to your desired hover color */
+  background-color: #ffc6ff !important; /* Change to your desired hover color */
+  border-color: #ffc6ff !important; /* Change to your desired hover color */
 }
 
 /* Override primary button color */
@@ -154,6 +163,14 @@ body {
   }
 }
 
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-top: var(--bs-gutter-y);
+}
 
 /* HTML: <div class="loader"></div> */
 .loader {
@@ -167,17 +184,30 @@ body {
   aspect-ratio: 1;
   border-radius: 50%;
   border-color: #000;
-  background:
-    radial-gradient(farthest-side,#000 95%,#0000) 35% 35%/6px 6px no-repeat
-    #fff;
-    border: 1px solid #000;
+  background: radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/6px 6px
+    no-repeat #fff;
+  border: 1px solid #000;
   animation: l5 3s infinite;
 }
 @keyframes l5 {
-  0%,11%   {background-position:35% 35%}
-  14%,36%  {background-position:65% 35%}
-  38%,61%  {background-position:65% 65%}
-  64%,86%  {background-position:35% 65%}
-  88%,100% {background-position:35% 35%}
+  0%,
+  11% {
+    background-position: 35% 35%;
+  }
+  14%,
+  36% {
+    background-position: 65% 35%;
+  }
+  38%,
+  61% {
+    background-position: 65% 65%;
+  }
+  64%,
+  86% {
+    background-position: 35% 65%;
+  }
+  88%,
+  100% {
+    background-position: 35% 35%;
+  }
 }
-
