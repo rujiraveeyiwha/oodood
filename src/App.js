@@ -192,7 +192,9 @@ function App() {
           </Button>
         </Container>
 
-        <FoodMarquee />
+        <Container className="px-4">
+          <FoodMarquee />
+        </Container>
       </div>
     </>
   );
