@@ -21,6 +21,9 @@ body {
   backdrop-filter: blur(3px);
 }
 
+.custom-font-size {
+  font-size: 1.2rem !important;
+}
 .app-container {
   /* display: flex;
   flex-direction: column; */
@@ -44,13 +47,13 @@ body {
 
 .custom-card-colour-2 {
   background-color: rgba(255, 206, 255, 0.7) !important;
-  border-color: #FFC6FF !important;
+  border-color: #ffc6ff !important;
 }
 
 /* Override primary button color */
 .btn-primary {
   background-color: #ffceff !important; /* Change to your desired color */
-  border-color: #E7BFFF !important; /* Change to your desired color */
+  border-color: #e7bfff !important; /* Change to your desired color */
   color: #282c34 !important;
 }
 
@@ -61,13 +64,13 @@ body {
 .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
   background-color: #ffc6ff !important; /* Change to your desired hover color */
-  border-color: #E7BFFF !important; /* Change to your desired hover color */
+  border-color: #e7bfff !important; /* Change to your desired hover color */
 }
 
 /* Override primary button color */
 .btn-warning {
-  background-color: #be9ad3 !important; /* Change to your desired color */
-  border-color: #be9ad3 !important; /* Change to your desired color */
+  background-color: #9EDDFF !important; /* Change to your desired color */
+  border-color: #A0C4FF !important; /* Change to your desired color */
   color: #282c34 !important;
 }
 
@@ -77,8 +80,8 @@ body {
 .btn-warning:active,
 .btn-warning.active,
 .show > .btn-warning.dropdown-toggle {
-  background-color: #b16ed8 !important; /* Change to your desired hover color */
-  border-color: #b16ed8 !important; /* Change to your desired hover color */
+  background-color: #A0CBFF !important; /* Change to your desired hover color */
+  border-color: #A0CBFF !important; /* Change to your desired hover color */
 }
 
 /* Override primary button color */

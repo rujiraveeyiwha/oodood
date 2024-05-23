@@ -97,6 +97,7 @@ function App() {
                         type="checkbox"
                         label="ข้าว"
                         name="rice"
+                        className="custom-font-size"
                         checked={selectedCategories.rice}
                         onChange={handleCheckboxChange}
                       />
@@ -105,6 +106,7 @@ function App() {
                         type="checkbox"
                         label="เส้น"
                         name="noodles"
+                        className="custom-font-size"
                         checked={selectedCategories.noodles}
                         onChange={handleCheckboxChange}
                       />
@@ -113,6 +115,7 @@ function App() {
                         type="checkbox"
                         label="ทานเล่น"
                         name="easy"
+                        className="custom-font-size"
                         checked={selectedCategories.easy}
                         onChange={handleCheckboxChange}
                       />
@@ -121,6 +124,7 @@ function App() {
                         type="checkbox"
                         label="แซ่บ"
                         name="spicy"
+                        className="custom-font-size"
                         checked={selectedCategories.spicy}
                         onChange={handleCheckboxChange}
                       />
@@ -129,7 +133,7 @@ function App() {
                 </Card.Text>
                 <Button
                   variant="primary"
-                  className="mb-3"
+                  className="mb-3 custom-font-size"
                   onClick={handleRandomSelection}
                 >
                   สุ่มเลย!🪄
