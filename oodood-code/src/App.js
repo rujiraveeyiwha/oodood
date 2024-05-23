@@ -148,24 +148,33 @@ function App() {
       <Container className="px-4">
         <Row className="gx-4 gx-lg-5 my-5">
           <Card style={{ height: "10rem" }}>
-            <Card.Body>
-              {selectedItem.length === 0 ? (
-                <Card.Title className="mb-3">คิดๆๆ</Card.Title>
-              ) : (
-                <Card.Title className="mb-3">เราขอเสนอ</Card.Title>
-              )}
-
-              <Card.Text>
+            <Card.Body className="d-flex flex-column justify-content-center align-items-center">
+              <div>
                 {selectedItem.length === 0 ? (
-                  <Image
-                    variant="bottom"
-                    src="https://media.giphy.com/media/mRh4cLIYhrs9G/giphy.gif?cid=ecf05e47utprpx1v57nlyntvjq466or7y54xhjjwe7hgf42h&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-                    style={{ width: "50%", height: "50%" }}
-                  />
+                  <Card.Title className="mx-3">คิดๆๆ</Card.Title>
                 ) : (
-                  <p className="mt-3">{selectedItem}</p>
+                  <Card.Title className="mx-3">เราขอเสนอ</Card.Title>
                 )}
-              </Card.Text>
+              </div>
+
+              <div>
+                <Card.Text>
+                  {selectedItem.length === 0 ? (
+                    <Image
+                      variant="bottom"
+                      src="https://media.giphy.com/media/mRh4cLIYhrs9G/giphy.gif?cid=ecf05e47utprpx1v57nlyntvjq466or7y54xhjjwe7hgf42h&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+                      style={{ width: "50%", height: "50%" }}
+                    />
+                  ) : (
+                    // <h2 className="mx-3 text-center post-heading">
+                    //   {selectedItem}
+                    // </h2>
+                    <div class="post-heading">
+                      <h2>{selectedItem}</h2>
+                    </div>
+                  )}
+                </Card.Text>
+              </div>
             </Card.Body>
           </Card>
         </Row>
