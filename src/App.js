@@ -76,6 +76,7 @@ function App() {
 
   return (
     <>
+      <div className="App app-container">
       <Navbar expand="lg" className="navbar-colour shadow">
         <Container className="d-flex justify-content-center align-items-center">
           <Navbar.Brand href="#">
@@ -83,7 +84,6 @@ function App() {
           </Navbar.Brand>
         </Container>
       </Navbar>
-      <div className="App app-container">
         <Container className="px-4 px-lg-5 pt-5">
           <Row className="gx-4 gx-lg-5 my-2">
             <Card className="mt-3">
