@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Col, Row, Card, Button, Form } from "react-bootstrap";
 import "./App.css";
 import Menu from "./Assets/Menu.json";
+import FoodMarquee from "./FoodMarquee";
 
 function App() {
   const [selectedItem, setSelectedItem] = useState("");
@@ -144,9 +145,11 @@ function App() {
           className="mb-3"
           onClick={handleClearSelection}
         >
-          เอาใหม่ๆ
+          ล้างๆ
         </Button>
       </Container>
+
+      <FoodMarquee />
     </div>
   );
 }

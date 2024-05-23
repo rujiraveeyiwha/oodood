@@ -71,8 +71,36 @@ body {
 }
 
 .form-check .form-check-input {
-float: none !important;
-margin-right: 1em;
+  float: none !important;
+  margin-right: 1em;
+}
+
+.marquee-container {
+  position: fixed;
+  bottom: 20px; /* Margin bottom */
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+  animation-delay: -5.5s; /* Start immediately by offsetting the initial animation */
+  font-size: 50px; /* Adjust the font size of the emojis */
+  letter-spacing: 20px;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* Start from the left edge of the container */
+  }
+  100% {
+    transform: translateX(
+      -100%
+    ); /* Move the full width of the content to the left */
+  }
 }
 
 /* iPhone X/XS/11 Pro (375x812) */
