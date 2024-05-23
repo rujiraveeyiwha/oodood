@@ -77,7 +77,7 @@ function App() {
   return (
     <>
       <div className="App app-container">
-        <Navbar expand="lg" className="navbar-colour shadow">
+        <Navbar sticky="top" expand="lg" className="navbar-colour shadow">
           <Container className="d-flex justify-content-center align-items-center">
             <Navbar.Brand href="#">
               วันนี้กินอะไรดีคะ🍽️ <Badge bg="warning">V1.0</Badge>
