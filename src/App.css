@@ -50,7 +50,7 @@ body {
 /* Override primary button color */
 .btn-primary {
   background-color: #ffceff !important; /* Change to your desired color */
-  border-color: #ffceff !important; /* Change to your desired color */
+  border-color: #E7BFFF !important; /* Change to your desired color */
   color: #282c34 !important;
 }
 
@@ -61,7 +61,7 @@ body {
 .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
   background-color: #ffc6ff !important; /* Change to your desired hover color */
-  border-color: #ffc6ff !important; /* Change to your desired hover color */
+  border-color: #E7BFFF !important; /* Change to your desired hover color */
 }
 
 /* Override primary button color */

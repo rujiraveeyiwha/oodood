@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import {
   Container,
-  Col,
   Row,
   Card,
   Button,
   Form,
   FormGroup,
   Badge,
-  Image,
   Navbar,
 } from "react-bootstrap";
 import "./App.css";
