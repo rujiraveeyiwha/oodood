@@ -7,8 +7,8 @@ body {
 }
 
 .app-container {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   /* justify-content: center; */
   /* align-items: center; */
   min-height: 100vh;
@@ -19,28 +19,60 @@ body {
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Override primary button color */
+.btn-primary {
+  background-color: #ffc8dd !important; /* Change to your desired color */
+  border-color: #ffc8dd !important; /* Change to your desired color */
+  color: #282c34 !important;
 }
 
-.App-link {
-  color: #61dafb;
+/* Override primary button hover color */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #ffafcc !important; /* Change to your desired hover color */
+  border-color: #ffafcc !important; /* Change to your desired hover color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Override primary button color */
+.btn-warning {
+  background-color: #be9ad3 !important; /* Change to your desired color */
+  border-color: #be9ad3 !important; /* Change to your desired color */
+  color: #282c34 !important;
+}
+
+/* Override warning button hover color */
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.show > .btn-warning.dropdown-toggle {
+  background-color: #b16ed8 !important; /* Change to your desired hover color */
+  border-color: #b16ed8 !important; /* Change to your desired hover color */
+}
+
+/* Override primary button color */
+.btn-light {
+  background-color: #f18701 !important; /* Change to your desired color */
+  border-color: #f18701 !important; /* Change to your desired color */
+  color: white !important;
+}
+
+/* Override light button hover color */
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active,
+.btn-light.active,
+.show > .btn-light.dropdown-toggle {
+  background-color: #f35b04 !important; /* Change to your desired hover color */
+  border-color: #f35b04 !important; /* Change to your desired hover color */
+}
+
+.form-check .form-check-input {
+float: none !important;
+margin-right: 1em;
 }
 
 /* iPhone X/XS/11 Pro (375x812) */
