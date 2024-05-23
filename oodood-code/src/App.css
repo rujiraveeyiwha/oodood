@@ -113,7 +113,7 @@ body {
 
 .marquee-container {
   position: fixed;
-  bottom: 20px; /* Margin bottom */
+  bottom: 4rem; /* Margin bottom */
   left: 0;
   right: 0;
   overflow: hidden;
