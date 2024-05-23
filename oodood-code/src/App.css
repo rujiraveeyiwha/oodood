@@ -87,14 +87,14 @@ body {
 
 .marquee {
   display: inline-block;
-  animation: marquee 25s linear infinite;
-  animation-delay: -5.5s; /* Start immediately by offsetting the initial animation */
+  animation: marquee 60s linear infinite;
+  animation-delay: -25s; /* Start immediately by offsetting the initial animation */
   font-size: 50px; /* Adjust the font size of the emojis */
   letter-spacing: 20px;
 }
 @keyframes marquee {
   0% {
-    transform: translateX(0); /* Start from the left edge of the container */
+    transform: translateX(100%); /* Start from the left edge of the container */
   }
   100% {
     transform: translateX(

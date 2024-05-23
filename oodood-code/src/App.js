@@ -128,7 +128,7 @@ function App() {
 
       <Container className="px-4">
         <Row className="gx-4 gx-lg-5 my-4">
-          <Card>
+          <Card style={{ height: "10rem" }}>
             <Card.Body>
               <Card.Title>เราขอเสนอ</Card.Title>
               <Card.Text>
