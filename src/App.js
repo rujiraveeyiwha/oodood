@@ -12,6 +12,7 @@ import {
 import "./App.css";
 import Menu from "./Assets/Menu.json";
 import FoodMarquee from "./FoodMarquee";
+import RandomItemDisplay from "./RandomItemDisplay";
 
 function App() {
   const [selectedItem, setSelectedItem] = useState("");
@@ -137,6 +138,13 @@ function App() {
                   onClick={handleRandomSelection}
                 >
                   สุ่มเลย!🪄
+                </Button>{" "}
+                <Button
+                  variant="outline-success"
+                  className="mb-3"
+                  onClick={handleClearSelection}
+                >
+                  ล้างๆ
                 </Button>
               </Card.Body>
               <Card.Footer>
@@ -176,7 +184,7 @@ function App() {
                 <div>
                   <Card.Text>
                     {selectedItem.length === 0 ? (
-                      <div class="loader"></div>
+                      <RandomItemDisplay></RandomItemDisplay>
                     ) : (
                       <div class="highlight-text">
                         <h2>{selectedItem}!</h2>
@@ -189,19 +197,7 @@ function App() {
           </Row>
         </Container>
 
-        <Container className="mt-1">
-          <Button
-            variant="outline-success"
-            className="mb-2"
-            onClick={handleClearSelection}
-          >
-            ล้างๆ
-          </Button>
-        </Container>
-
-        <Container className="pb-4">
-          <FoodMarquee />
-        </Container>
+        <Container className="pb-2">{/* <FoodMarquee /> */}</Container>
       </div>
     </>
   );
