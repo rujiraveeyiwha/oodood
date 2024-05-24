@@ -16,7 +16,7 @@ const RandomItemDisplay = () => {
   useEffect(() => {
     const id = setInterval(() => {
       setCurrentItem(getRandomItem());
-    }, 100); // Change item every 1 second
+    }, 50); // Change item every 1 second
     setIntervalId(id);
 
     return () => clearInterval(id); // Cleanup on component unmount

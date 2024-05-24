@@ -6,12 +6,10 @@ import {
   Button,
   Form,
   FormGroup,
-  Badge,
   Navbar,
 } from "react-bootstrap";
 import "./App.css";
 import Menu from "./Assets/Menu.json";
-import FoodMarquee from "./FoodMarquee";
 import RandomItemDisplay from "./RandomItemDisplay";
 
 function App() {
@@ -22,6 +20,7 @@ function App() {
     easy: false,
     spicy: false,
   });
+  const [displayingRandom, setDisplayingRandom] = useState(false);
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
@@ -37,9 +36,16 @@ function App() {
     if (selectedCategories.noodles) items = [...items, ...Menu.noodles];
     if (selectedCategories.easy) items = [...items, ...Menu.easy];
     if (selectedCategories.spicy) items = [...items, ...Menu.spicy];
+
     if (items.length > 0) {
       const randomItem = items[Math.floor(Math.random() * items.length)];
-      setSelectedItem(randomItem);
+      setDisplayingRandom(true);
+
+      // Set a timeout to update the selectedItem after 2 seconds
+      setTimeout(() => {
+        setDisplayingRandom(false);
+        setSelectedItem(randomItem);
+      }, 1000);
     } else {
       setSelectedItem("เลือกประเภทก่อนนะคนดี");
     }
@@ -51,16 +57,23 @@ function App() {
       ...Menu.noodles,
       ...Menu.easy,
       ...Menu.spicy,
-      ...Menu.fast,
     ];
     const randomItem = allItems[Math.floor(Math.random() * allItems.length)];
-    setSelectedItem(randomItem);
+    setDisplayingRandom(true);
+    setTimeout(() => {
+      setDisplayingRandom(false);
+      setSelectedItem(randomItem);
+    }, 1000);
   };
 
   const handleFastSelection = () => {
     const fastItems = Menu.fast;
     const randomItem = fastItems[Math.floor(Math.random() * fastItems.length)];
-    setSelectedItem(randomItem);
+    setDisplayingRandom(true);
+    setTimeout(() => {
+      setDisplayingRandom(false);
+      setSelectedItem(randomItem);
+    }, 2000);
   };
 
   const handleClearSelection = () => {
@@ -145,23 +158,6 @@ function App() {
                   ล้างๆ
                 </Button>
               </Card.Body>
-              {/* <Card.Footer>
-                <Button
-                  type="button"
-                  variant="warning"
-                  className="mx-3"
-                  onClick={handleSelectAll}
-                >
-                  ได้หมด
-                </Button>
-                <Button
-                  type="button"
-                  variant="light"
-                  onClick={handleFastSelection}
-                >
-                  ขอเป็นมื้อเร็วๆจ้า
-                </Button>
-              </Card.Footer> */}
             </Card>
           </Row>
         </Container>
@@ -206,10 +202,12 @@ function App() {
 
                 <div>
                   <Card.Text>
-                    {selectedItem.length === 0 ? (
-                      <RandomItemDisplay></RandomItemDisplay>
+                    {displayingRandom ? (
+                      <RandomItemDisplay />
+                    ) : selectedItem.length === 0 ? (
+                      <p></p>
                     ) : (
-                      <div class="highlight-text">
+                      <div className="highlight-text">
                         <h2>{selectedItem}🎉</h2>
                       </div>
                     )}
