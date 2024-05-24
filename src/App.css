@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: scroll;
+  overflow: hidden;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
@@ -51,10 +51,15 @@ body {
   border-color: #ffc6ff !important;
 }
 
+.transparent-card {
+  background-color:rgba(197, 27, 18, 0) !important;
+  border-color: #ffc6ff !important;
+}
+
 /* Override primary button color */
 .btn-primary {
-  background-color: #ffceff !important; /* Change to your desired color */
-  border-color: #e7bfff !important; /* Change to your desired color */
+  background-color: #BDE0FE !important; /* Change to your desired color */
+  border-color: #A2D2FF !important; /* Change to your desired color */
   color: #282c34 !important;
 }
 
@@ -64,8 +69,8 @@ body {
 .btn-primary:active,
 .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
-  background-color: #ffc6ff !important; /* Change to your desired hover color */
-  border-color: #e7bfff !important; /* Change to your desired hover color */
+  background-color: #A2D2FF !important; /* Change to your desired hover color */
+  border-color: #A2D2FF !important; /* Change to your desired hover color */
 }
 
 /* Override primary button color */

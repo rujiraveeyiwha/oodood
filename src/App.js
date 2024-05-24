@@ -78,9 +78,7 @@ function App() {
       <div className="App app-container">
         <Navbar sticky="top" expand="lg" className="navbar-colour shadow">
           <Container className="d-flex justify-content-center align-items-center">
-            <Navbar.Brand href="#">
-              วันนี้กินอะไรดีคะ🍽️ <Badge bg="warning">V1.0</Badge>
-            </Navbar.Brand>
+            <Navbar.Brand href="#">วันนี้กินอะไรดีคะ❓</Navbar.Brand>
           </Container>
         </Navbar>
         <Container className="px-4 px-lg-5 pt-2">
@@ -147,7 +145,7 @@ function App() {
                   ล้างๆ
                 </Button>
               </Card.Body>
-              <Card.Footer>
+              {/* <Card.Footer>
                 <Button
                   type="button"
                   variant="warning"
@@ -163,13 +161,38 @@ function App() {
                 >
                   ขอเป็นมื้อเร็วๆจ้า
                 </Button>
-              </Card.Footer>
+              </Card.Footer> */}
             </Card>
           </Row>
         </Container>
 
         <Container className="px-4">
-          <Row className="gx-4 gx-lg-5 my-5">
+          <Row className="gx-4 gx-lg-5">
+            <Card className="transparent-card">
+              <Card.Body>
+                <p className="text-white">หรือว่า ...</p>
+                <Button
+                  type="button"
+                  variant="warning"
+                  className="mx-2"
+                  onClick={handleSelectAll}
+                >
+                  ได้หมด
+                </Button>
+                <Button
+                  type="button"
+                  variant="warning"
+                  onClick={handleFastSelection}
+                >
+                  ขอมื้อเร็วๆจ้า
+                </Button>
+              </Card.Body>
+            </Card>
+          </Row>
+        </Container>
+
+        <Container className="px-4">
+          <Row className="gx-4 gx-lg-5 my-2">
             <Card style={{ height: "10rem" }} className="custom-card-colour-2">
               <Card.Body className="d-flex flex-column justify-content-center align-items-center">
                 <div>
@@ -187,7 +210,7 @@ function App() {
                       <RandomItemDisplay></RandomItemDisplay>
                     ) : (
                       <div class="highlight-text">
-                        <h2>{selectedItem}!</h2>
+                        <h2>{selectedItem}🎉</h2>
                       </div>
                     )}
                   </Card.Text>
