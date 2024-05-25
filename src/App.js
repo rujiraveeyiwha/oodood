@@ -74,7 +74,7 @@ function App() {
     setTimeout(() => {
       setDisplayingRandom(false);
       setSelectedItem(randomItem);
-    }, 2000);
+    }, 1000);
   };
 
   const handleClearSelection = () => {
@@ -163,7 +163,7 @@ function App() {
           </Row>
         </Container>
 
-        <Container className="px-4">
+        <Container className="px-4 px-4 px-lg-5">
           <Row className="gx-4 gx-lg-5">
             <Card className="transparent-card">
               <Card.Body>
@@ -188,7 +188,7 @@ function App() {
           </Row>
         </Container>
 
-        <Container className="px-4">
+        <Container className="px-4 px-4 px-lg-5">
           <Row className="gx-4 gx-lg-5 my-2">
             <Card style={{ height: "10rem" }} className="custom-card-colour-2">
               <Card.Body className="d-flex flex-column justify-content-center align-items-center">
