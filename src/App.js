@@ -146,14 +146,14 @@ function App() {
                 </Card.Text>
                 <Button
                   variant="primary"
-                  className="mb-3 custom-font-size"
+                  className="mb-2 custom-font-size"
                   onClick={handleRandomSelection}
                 >
                   สุ่มเลย!🪄
                 </Button>{" "}
                 <Button
                   variant="outline-success"
-                  className="mb-3"
+                  className="mb-2"
                   onClick={handleClearSelection}
                 >
                   ล้างๆ
@@ -165,13 +165,14 @@ function App() {
 
         <Container className="px-4 px-4 px-lg-5">
           <Row className="gx-4 gx-lg-5">
-            <Card className="transparent-card">
+            <Card className="transparent-card" style={{ fontSize: "0.8rem" }}>
               <Card.Body>
                 <p className="text-white">หรือว่า ...</p>
                 <Button
                   type="button"
                   variant="warning"
                   className="mx-2"
+                  style={{ fontSize: "0.8rem" }}
                   onClick={handleSelectAll}
                 >
                   ได้หมด
@@ -179,6 +180,7 @@ function App() {
                 <Button
                   type="button"
                   variant="warning"
+                  style={{ fontSize: "0.8rem" }}
                   onClick={handleFastSelection}
                 >
                   ขอมื้อเร็วๆจ้า
