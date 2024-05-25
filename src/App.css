@@ -9,15 +9,15 @@
 body {
   background-color: rgba(255, 255, 255, 0.7);
   /* background-image: url("https://i.pinimg.com/originals/cf/15/c1/cf15c1f7e25035f9e119ccf9104427e3.jpg"); */
-  background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExandrand6dnp3b2c0bzhxc2ptODBuOWw2MWFqb214eHp1d292MzQ5MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jKaFXbKyZFja0/giphy.gif');
+  background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExandrand6dnp3b2c0bzhxc2ptODBuOWw2MWFqb214eHp1d292MzQ5MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jKaFXbKyZFja0/giphy.gif");
   box-shadow: inset 0 0 0 2000px rgba(36, 36, 36, 0.1);
   background-size: cover; /* Ensure the background image covers the entire viewport */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
   background-position: center; /* Center the background image */
-  min-height: 100vh;
+  max-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: scroll; */
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
@@ -52,14 +52,14 @@ body {
 }
 
 .transparent-card {
-  background-color:rgba(197, 27, 18, 0) !important;
+  background-color: rgba(197, 27, 18, 0) !important;
   border-color: #ffc6ff !important;
 }
 
 /* Override primary button color */
 .btn-primary {
-  background-color: #BDE0FE !important; /* Change to your desired color */
-  border-color: #A2D2FF !important; /* Change to your desired color */
+  background-color: #bde0fe !important; /* Change to your desired color */
+  border-color: #a2d2ff !important; /* Change to your desired color */
   color: #282c34 !important;
 }
 
@@ -69,14 +69,14 @@ body {
 .btn-primary:active,
 .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
-  background-color: #A2D2FF !important; /* Change to your desired hover color */
-  border-color: #A2D2FF !important; /* Change to your desired hover color */
+  background-color: #a2d2ff !important; /* Change to your desired hover color */
+  border-color: #a2d2ff !important; /* Change to your desired hover color */
 }
 
 /* Override primary button color */
 .btn-warning {
-  background-color: #9EDDFF !important; /* Change to your desired color */
-  border-color: #A0C4FF !important; /* Change to your desired color */
+  background-color: #9eddff !important; /* Change to your desired color */
+  border-color: #a0c4ff !important; /* Change to your desired color */
   color: #282c34 !important;
 }
 
@@ -86,12 +86,13 @@ body {
 .btn-warning:active,
 .btn-warning.active,
 .show > .btn-warning.dropdown-toggle {
-  background-color: #A0CBFF !important; /* Change to your desired hover color */
-  border-color: #A0CBFF !important; /* Change to your desired hover color */
+  background-color: #a0cbff !important; /* Change to your desired hover color */
+  border-color: #a0cbff !important; /* Change to your desired hover color */
 }
 
 /* Override primary button color */
 .btn-light {
+  font-size: .7rem;
   background-color: #f18701 !important; /* Change to your desired color */
   border-color: #f18701 !important; /* Change to your desired color */
   color: white !important;
@@ -137,6 +138,11 @@ body {
   box-shadow: inset 0 -0.5em 0 rgb(255, 189, 0) !important;
 }
 
+.modal-body-scrollable {
+  max-height: 80vh; /* Adjust this value as needed */
+  overflow-y: auto;
+}
+
 .marquee-container {
   position: fixed;
   bottom: 4rem; /* Margin bottom */
@@ -163,6 +169,18 @@ body {
       -100%
     ); /* Move the full width of the content to the left */
   }
+}
+
+.all-menu-text {
+  font-size: 1rem;
+}
+
+.custom-modal {
+  font-size: 0.7rem;
+}
+
+.modal-content {
+  background-color: rgba(255, 254, 254, 0.75) !important;
 }
 
 /* iPhone X/XS/11 Pro (375x812) */

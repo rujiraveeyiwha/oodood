@@ -11,6 +11,7 @@ import {
 import "./App.css";
 import Menu from "./Assets/Menu.json";
 import RandomItemDisplay from "./RandomItemDisplay";
+import AllMenu from "./AllMenu";
 
 function App() {
   const [selectedItem, setSelectedItem] = useState("");
@@ -94,7 +95,7 @@ function App() {
             <Navbar.Brand href="#">วันนี้กินอะไรดีคะ❓</Navbar.Brand>
           </Container>
         </Navbar>
-        <Container className="px-4 px-lg-5 pt-2">
+        <Container className="px-4 px-lg-5">
           <Row className="gx-4 gx-lg-5 my-2">
             <Card className="mt-3 custom-card-colour">
               <Card.Body>
@@ -218,7 +219,10 @@ function App() {
           </Row>
         </Container>
 
-        <Container className="pb-2">{/* <FoodMarquee /> */}</Container>
+        <Container className="pb-2">
+          {/* <FoodMarquee /> */}
+          <AllMenu />
+        </Container>
       </div>
     </>
   );
