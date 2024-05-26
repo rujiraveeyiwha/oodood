@@ -22,17 +22,17 @@ function AllMenu() {
 
   return (
     <>
-      {/* <div onClick={handleShow} className="all-menu-text text-white">
-        เมนูทั้งหมด
-      </div> */}
+      <Button onClick={handleShow} className="floating-btn">
+        🍴
+      </Button>
 
-      <Button
+      {/* <Button
         onClick={handleShow}
         className="all-menu-text text-white"
         variant="light"
       >
         เมนูทั้งหมด
-      </Button>
+      </Button> */}
 
       <Modal
         show={show}
@@ -46,7 +46,7 @@ function AllMenu() {
           {Object.keys(Menu).map((category) => (
             <Row key={category}>
               <Col>
-                <div className="highlight-text">
+                <div className="highlight-text-allmenu">
                   {getCategoryNameInThai(category)}
                 </div>
                 <ul>

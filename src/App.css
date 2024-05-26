@@ -94,7 +94,7 @@ body {
 /* Override primary button color */
 .btn-light {
   font-size: 0.7rem;
-  background-color: #FF9D60 !important; /* Change to your desired color */
+  background-color: #ff9d60 !important; /* Change to your desired color */
   border-color: #f4792d !important; /* Change to your desired color */
   color: white !important;
 }
@@ -127,6 +127,16 @@ body {
     rgb(255 69 0) 65%
   );
   box-shadow: inset 0 -0.5em 0 rgb(158, 221, 255);
+}
+
+.highlight-text-allmenu {
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  display: inline;
+  box-shadow: inset 0 -0.5em 0 rgb(255, 152, 168);
 }
 
 .highlight-text h2 {
@@ -180,8 +190,24 @@ body {
   font-size: 0.7rem;
 }
 
-.modal-content {
-  background-color: rgba(255, 254, 254, 0.75) !important;
+
+.floating-btn {
+  position: fixed;
+  padding-left: 0.5rem !important;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50% !important;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0;
+  line-height: 1;
+  background-color: white !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* iPhone X/XS/11 Pro (375x812) */

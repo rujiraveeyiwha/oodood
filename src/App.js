@@ -92,7 +92,9 @@ function App() {
       <div className="App app-container">
         <Navbar sticky="top" expand="lg" className="navbar-colour shadow">
           <Container className="d-flex justify-content-center align-items-center">
-            <Navbar.Brand href="#" className="text-white">วันนี้กินอะไรดีคะ❓</Navbar.Brand>
+            <Navbar.Brand href="#" className="text-white">
+              วันนี้กินอะไรดีคะ❓
+            </Navbar.Brand>
           </Container>
         </Navbar>
         <Container className="px-4 px-lg-5">
@@ -159,11 +161,34 @@ function App() {
                   ล้างๆ
                 </Button>
               </Card.Body>
+              <Card.Footer className="">
+                {" "}
+                <p className="" style={{ fontSize: "0.7rem" }}>
+                  หรือว่า ...
+                </p>
+                <Button
+                  type="button"
+                  variant="warning"
+                  className="mx-2"
+                  style={{ fontSize: "0.8rem" }}
+                  onClick={handleSelectAll}
+                >
+                  ได้หมด
+                </Button>
+                <Button
+                  type="button"
+                  variant="warning"
+                  style={{ fontSize: "0.8rem" }}
+                  onClick={handleFastSelection}
+                >
+                  ขอมื้อเร็วๆจ้า
+                </Button>
+              </Card.Footer>
             </Card>
           </Row>
         </Container>
 
-        <Container className="px-4 px-4 px-lg-5">
+        {/* <Container className="px-4 px-4 px-lg-5">
           <Row className="gx-4 gx-lg-5">
             <Card className="transparent-card" style={{ fontSize: "0.8rem" }}>
               <Card.Body>
@@ -188,7 +213,7 @@ function App() {
               </Card.Body>
             </Card>
           </Row>
-        </Container>
+        </Container> */}
 
         <Container className="px-4 px-4 px-lg-5">
           <Row className="gx-4 gx-lg-5 my-2">
@@ -222,7 +247,6 @@ function App() {
         </Container>
 
         <Container className="pb-2">
-          {/* <FoodMarquee /> */}
           <AllMenu />
         </Container>
       </div>
