@@ -9,7 +9,7 @@
 body {
   background-color: rgba(255, 255, 255, 0.7);
   /* background-image: url("https://i.pinimg.com/originals/cf/15/c1/cf15c1f7e25035f9e119ccf9104427e3.jpg"); */
-  background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExandrand6dnp3b2c0bzhxc2ptODBuOWw2MWFqb214eHp1d292MzQ5MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jKaFXbKyZFja0/giphy.gif");
+  background-image: url("https://i.pinimg.com/564x/bd/cb/0c/bdcb0cfb0137fcb436624cc24fc1a89a.jpg");
   box-shadow: inset 0 0 0 2000px rgba(36, 36, 36, 0.1);
   background-size: cover; /* Ensure the background image covers the entire viewport */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
@@ -18,8 +18,8 @@ body {
   margin: 0;
   padding: 0;
   /* overflow: scroll; */
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
+  /* -webkit-backdrop-filter: blur(3px); */
+  /* backdrop-filter: blur(3px); */
 }
 
 .custom-font-size {
@@ -39,7 +39,8 @@ body {
 }
 
 .navbar-colour {
-  background-color: #a0c4ff;
+  /* background-color: #a0c4ff; */
+  background-color: #ff98a8;
 }
 
 .custom-card-colour {
@@ -92,9 +93,9 @@ body {
 
 /* Override primary button color */
 .btn-light {
-  font-size: .7rem;
-  background-color: #f18701 !important; /* Change to your desired color */
-  border-color: #f18701 !important; /* Change to your desired color */
+  font-size: 0.7rem;
+  background-color: #FF9D60 !important; /* Change to your desired color */
+  border-color: #f4792d !important; /* Change to your desired color */
   color: white !important;
 }
 

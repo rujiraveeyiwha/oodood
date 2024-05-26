@@ -92,7 +92,7 @@ function App() {
       <div className="App app-container">
         <Navbar sticky="top" expand="lg" className="navbar-colour shadow">
           <Container className="d-flex justify-content-center align-items-center">
-            <Navbar.Brand href="#">วันนี้กินอะไรดีคะ❓</Navbar.Brand>
+            <Navbar.Brand href="#" className="text-white">วันนี้กินอะไรดีคะ❓</Navbar.Brand>
           </Container>
         </Navbar>
         <Container className="px-4 px-lg-5">
